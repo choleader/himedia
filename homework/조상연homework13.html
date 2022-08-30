@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .join_box,
+        .join_title .ok_cancel {
+            display: block;
+        }
+
+        .join_title>hr {
+            height: 3px;
+            width: 700px;
+            background-color: #507995;
+            float: left;
+            border: 0;
+        }
+
+        .join_title {
+            height: 20px;
+            width: 700px;
+        }
+
+        .join_box {
+            width: 700px;
+        }
+
+        table {
+            /* border: 1px solid #b0b0b0; */
+            border-bottom: 1px solid #b0b0b0;
+            border-collapse: collapse;
+        }
+
+        tr,
+        td {
+            padding: 10px;
+            width: 700px;
+        }
+
+        td {
+            border-bottom: 1px solid #b0b0b0;
+            font-size: 12px;
+        }
+
+
+
+        .left {
+            text-align: right;
+            width: 120px;
+        }
+
+        .ok_cancel {
+            width: 700px;
+            text-align: center;
+            padding: 20px;
+            padding-left: 0px;
+        }
+
+        .button4 {
+            background-color: white;
+            color: rgb(36, 36, 36);
+            border: 1px solid #b8b8b8;
+
+        }
+
+        .button4:hover {
+            background-color: #e7e7e7;
+            cursor: pointer;
+        }
+
+        input {
+            /* border-color: #9d9d9d; */
+            border: 1px solid #b8b8b8;
+        }
+
+        #buttonjoongbok {
+            height: 20px;
+            width: 70px;
+            font-size: 12px;
+            text-align: center;
+            border: 0px;
+            background-color: rgb(16, 124, 141);
+        }
+
+        #buttonjoongbok:hover {
+            background-color: rgb(32, 79, 120);
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="join_title">
+        <span id="idJoin_title">회원가입정보</span><br>
+        <hr>
+    </div>
+
+    <div class="join_box">
+        <form action="">
+            <table>
+                <tr>
+                    <td class="left">아이디</td>
+                    <td>
+                        <input type="text" name="id" style="width: 95px;">
+                        <button id="buttonjoongbok" type="button">중복확인</button>
+                        <span style="font-family: 돋움; font-size: 12px; color: #b0b0b0;">영문, 숫자 조합으로 4~12글자 이내</span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="left">비밀번호</td>
+                    <td><input type="password" name="pw" style="width: 95px;">
+                        <span style="font-family: 돋움; font-size: 12px; color: #b0b0b0;">영문, 숫자 조합으로 4~12글자 이내</span>
+                </tr>
+                <tr>
+                    <td class="left">비밀번호 확인</td>
+                    <td><input type="password" name="pwcheck" style="width: 95px;">
+                </tr>
+                <tr>
+                    <td class="left">이름</td>
+                    <td><input type="text" style="width: 95px;"></td>
+                </tr>
+                <tr>
+                    <td class="left">생년월일</td>
+                    <td>
+                        <input type="text" style="width: 45px;"><label>년</label>
+                        <input type="text" style="width: 20px;"><label>월</label>
+                        <input type="text" style="width: 20px;"><label>일</label>
+                        <input type="radio" value="1" name="birth"> <label class=>음력</label>
+                        <input type="radio" value="2" name="birth"> <label>양력</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">이메일</td>
+                    <td><input type="text" style="width: 95px;"></td>
+                </tr>
+                <tr>
+                    <td class="left">휴대전화</td>
+                    <td><input type="text" style="width: 30px;">-
+                        <input type="text" style="width: 50px;">-
+                        <input type="text" style="width: 50px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">직업</td>
+                    <td>
+                        <select name="jobselect" id="job">
+                            <option value="1">직업선택</option>
+                            <option value="2">학생</option>
+                            <option value="3">개발자</option>
+                            <option value="4">디자이너</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">영어수강목적</td>
+                    <td>
+                        <input type="checkbox" value="1"> <label>시험대비</label>
+                        <input type="checkbox" value="2"> <label>업무상</label>
+                        <input type="checkbox" value="3"> <label>취미</label>
+                        <input type="checkbox" value="4"> <label>기타</label>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="ok_cancel">
+        <input class="button4" type="button" value="가입취소">
+        <input class="button4" type="button" value="가입완료">
+    </div>
+
+</body>
+
+</html>

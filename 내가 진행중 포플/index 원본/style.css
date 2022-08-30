@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.head {
+  background-color: rgb(245, 179, 0);
+  height: 140px;
+  width: auto;
+}
+
+.login {
+  float: right;
+  margin-right: 10px;
+  margin-top: -100px;
+}
+
+.login > a {
+  font-size: 13px;
+  width: 50px;
+  height: 20px;
+
+  margin-right: 5px;
+  color: rgb(85, 84, 84);
+  transition: all 0.5s;
+}
+
+.login a:hover {
+  color: black;
+}
+
+.logo {
+  width: 330px;
+  text-align: center;
+  margin: auto;
+  padding-top: 25px;
+}
+.logo > a {
+  color: black;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.topMenuOut {
+  background-color: black;
+}
+
+.topMenu {
+  height: 50px;
+  margin: auto;
+  width: max-content;
+}
+
+.topMenu > ul > li {
+  float: left;
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.topMenu > ul > li > a {
+  color: white;
+
+  font-size: 20px;
+  transition: all 0.5s;
+}
+
+.topMenu a:hover {
+  color: rgb(245, 179, 0);
+}
+
+.topMenu > ul {
+  margin: auto;
+  padding: 10px 0px 0px 0px;
+}
+
+/* 검색박스 CSS */
+.serch {
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+.serch input {
+  border: none;
+}
+
+.serch input[type="text"] {
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 25px 0 0 25px;
+}
+.serch input[type="submit"] {
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 0 25px 25px 0;
+  width: 100px;
+  margin-left: -5px;
+  transition: all 0.5s;
+}
+
+.serch input[type="submit"]:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  outline: 3px solid rgb(188, 148, 1);
+}
+
+.serch input:focus {
+  outline: 3px solid rgb(188, 148, 1);
+}
+
+/* ★★★★★★★로그인 CSS 영역 ★★★★★★★ */

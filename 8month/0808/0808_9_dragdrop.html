@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 해당 id 요소에 적용 */
+        #shopping_cart {
+            width: 610px;
+            height: 100px;
+            padding: 10px;
+            border: 1px dotted red;
+        }
+        /* img태그에 크기 적용 */
+        img {
+            width : 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            // preventDefault : a 태그나 submit 태그가 눌렸을 때 창의 새로고침을 막는 메소드
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            // ev.dataTransfer.setData("text", ev.target.id) : 이벤트 핸들러에서
+            // 전달할 데이터를 지정, 키-값의 형태
+            ev.dataTransfer.setData("text", ev.target.id);
+            // text라는 임의의 변수에 drag되는 요소의 id값을 세팅한다.
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            // data 객체에 text 값을 입력함
+            let data = ev.dataTransfer.getData("text");
+            // data 객체를 target 객체에 자식 객체로 만드는 것
+            ev.target.appendChild(document.getElementById(data));
+        }
+        // setData(type, data) : 끌어다 놓기 위해 새로운 type을 정의하고 끌어올 data를 저장
+        // getData(type) : setData에서 정의한 type을 가져온다.
+
+    </script>
+</head>
+<body>
+    <p>원하는 삼품을 카트에 담으세요.</p>
+    <!-- 이곳이 쇼핑 카트 공간 -->
+    <!-- ondragover = "allowDrop(event) 함수를 활용해 드롭 명령을 받아들임" -->
+    <div id="shopping_cart" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+    <br>
+    <!-- draggable = true 명령을 통해 드래그가 가능하도록 설정
+    ondragstart = "drag(event)" 를 통해, 드래그 이벤트가 실행되면 함수를 실행시킴 -->
+    <img id="img1" src="C:\media/apple.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img2" src="C:\media/banana.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img3" src="C:\media/button.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img4" src="C:\media/jajang.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img5" src="C:\media/jjambbong.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img6" src="C:\media/tangsuyuk.png" draggable="true" ondragstart = "drag(event)">
+    <img id="img7" src="C:\media/spongebob.png" draggable="true" ondragstart = "drag(event)">
+
+    
+</body>
+</html>

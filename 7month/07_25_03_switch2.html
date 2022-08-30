@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>출퇴근 판독</h3>
+    <script>
+        let gogogo = 0;
+        let day = prompt("요일을 입력해주세요.", "");
+
+        switch(day){
+            case "월요일" : gogogo = "출근";
+                // break;
+
+            case "화요일" : gogogo = "출근";
+                // break;
+            
+            case "수요일" : gogogo = "출근";
+                // break;
+
+            case "목요일" : gogogo = "출근";
+                // break;
+            
+            case "금요일" : gogogo = "출근";
+                break;
+            
+            case "토요일" : gogogo = "휴무";
+                // break;
+
+            case "일요일" : gogogo = "휴무";
+                break;
+
+            default :
+                alert("잘못된 입력")
+                document.write(day+ "요일은 잘못된 입력입니다.")
+        }
+
+        if(gogogo != 0){
+            document.write(day + "은 " + gogogo + "입니다.")
+        
+        }
+        
+
+        
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+<!-- gogogo 입력시 gogogo 요일은 잘못된 입력입니다. -->
+<!-- 월화수목금 출근입니다. -->
+<!-- 토일 휴일입니다. -->
+<!-- day 잘못된 입력입니다.
+ -->

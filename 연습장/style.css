@@ -1,0 +1,84 @@
+* {
+  text-decoration-line: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.head {
+  background-color: rgb(245, 179, 0);
+  height: 140px;
+  width: auto;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  background-color: yellow;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  /* flex를 이용하여 로고 중앙배치 */
+  /* height: 200px; */
+  width: 400px;
+  margin: auto;
+  /* padding-top: 25px; */
+}
+
+.logo > a {
+  color: black;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.login {
+  background-color: blueviolet;
+  float: right;
+  margin-right: 10px;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.login > a {
+  font-size: 13px;
+  width: 50px;
+  height: 20px;
+  margin-right: 5px;
+  color: rgb(85, 84, 84);
+}
+
+.topMenu {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 40px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+
+.topMenuOut {
+  background-color: pink;
+}
+
+/* .subManu {
+  text-align: center;
+} */
+.subManu > li {
+  /* display: inline-block; */
+  float: left;
+  text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}

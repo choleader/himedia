@@ -1,0 +1,8 @@
+/* h1{color: blueviolet; text-shadow: 5px 5px 5px gray; text; font-family: Arial;} */
+
+#p1{color: blueviolet; font-family: arial; font-size: 60px; text-shadow: 5px 5px 5px gray; text-align: center;}
+#p2{color: green; font-size: 30px;}
+#p3{font-size: 20px; font-style: italic;}
+#p4{color: #444444; font-family: 돋움; font-style: italic; font-size: 14px;}
+
+p{line-height: 150%;}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>스타일 합치기 및 오버라이딩</title>
+        <!-- css파일 external.css 파일 코드를 받음 href="external.css"로 받음 -->
+        <!-- 우선순위 3 -->
+        <link type="text/css" rel="stylesheet" href="external.css">
+        <!-- 내부에 코딩된 스타일 태그
+        두가지가 중첩되면 내장 코드가 우선시 된다 -->
+        <!-- 우선순위2 -->
+        <style>
+            p{color: blue; font-size: 12px;}
+        </style>
+    </head>
+
+    <body>
+        <h3>p 태그에 중첩된 스타일</h3>
+        <!-- p태그가 아니라 style을 안 먹음 -->
+        <p>Hello, students!</p> <!-- 위의 p태그 스타일 먹음 -->
+        <p style="font-size: ;25px">안녕하세요. 교수님!</p>
+        <!-- 우선순위1 -->
+        <!-- 위의 p태그와 지금 추가된 스타일이 중첩됨 -->
+    </body>
+</html>
+<!-- 셀랙터(selector)
+    HTML 태그의 모양을 꾸밀 스타일 시트를 선택하는 기능
+ 태그 이름 셀랙터
+    태그 이름이 셀랙터로 사용되는 유형
+    셀랙터와 같은 이름의 모든 태그에 CSS3 스타일 시트 적용
+    h3,li {color : brown;} -->

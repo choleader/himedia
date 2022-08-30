@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <style>
+        /* 애니메이션 어노테이션 */
+        /* form : 시작상태
+        to : 애니메이션 종료 상태 */
+
+        @keyframes bomb{
+            from{font-size: 500%;}
+            to{font-size: 100%;}
+        }
+
+        h3{
+            /*@keyframes의 이름 bomb를 사용해 위의 애니메이션 동작 사용*/
+            animation-name: bomb;
+            /* animation-duration: 1s; : 1회 애니메이션 실행 시간 1초 */
+            animation-duration: 1s;
+            /* animation-iteration-count: infinite; -> 애니메이션 반복 획수 무한 */
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h3>꽝!</h3><hr>
+    <p>꽝! 글자가 3초동안 500%에서 시작하여 100%로 바뀌는 애니메이션입니다. 세 번 반복합니다.</p>
+    
+</body>
+</html>

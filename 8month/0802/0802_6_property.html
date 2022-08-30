@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체 프로퍼티</title>
+</head>
+<body>
+    <h3>이벤트 객체의 프로퍼티 출력</h3>
+    <p id="p">버튼을 클릭하면 이벤트 객체를 출력합니다.</p>
+    <button onclick="f(event)">클릭하세요</button>
+    <script>
+        // 이벤트 객체가 가진 상태를 출력
+        // type : event type
+        // target : 이벤트 대상(여기서는 버튼 요소)
+        // currentTarget : 가장 최근에 적용된 이벤트 대상
+        // defaultPrevented : 이벤트 디폴트 행동이 취소외었는지를 나타내는 true/false의 값
+        function f(e) {
+            let text = "type : " + e.type + "<br>"
+                        + "target : " + e.target + "<br>"
+                        + "currentTarget : " + e.currentTarget + "<br>"
+                        + "defaultPrevented : " + e.defaultPrevented;
+            let p = document.getElementById("p");
+            p.innerHTML = text; //이벤트 객체의 프로퍼티 출력
+        }
+    </script>
+    
+</body>
+</html>
+
+<!-- 이벤트의 디폴트 행동이란?
+특정 이벤트에 대한 HTML 태그의 기본 행동 -->

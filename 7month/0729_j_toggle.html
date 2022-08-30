@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                // toggleClass : addClass, removeClass를 통합한 명령
+                // 처음 누르면 add, 한번 더 실행되면 remove가 된다.
+                $("h1, h2, p, div").toggleClass("red");
+            });
+        });
+    </script>
+    <style>
+        .red{
+            color: red;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML5</h1>
+    <h2>안녕</h2>
+    <p>안녀엉</p>
+    <div>안녀어엉</div>
+    <br>
+    <button>버튼</button>
+
+    
+</body>
+</html>

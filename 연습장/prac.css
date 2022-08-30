@@ -1,0 +1,9 @@
+.img_div {
+  border: 3px solid red;
+  width: auto;
+}
+
+img {
+  width: 100%;
+  position: absolute;
+}

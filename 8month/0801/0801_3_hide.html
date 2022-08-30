@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 각 id에 맞는 버튼을 누르면 동작 실행
+            $("#hide").click(function(){
+                $("img").hide("slow");
+            });
+            // 버튼을 누르면 img 태그 그림의 크기가 변경된다.
+            // 메소드에 속성 : 속성값을 지정할 때는 ();가 아닌 ({});
+            // slow : 천천히 이미지가 사라진다.
+            $("#show").click(function(){
+                $("img").show("fast");
+            });
+            // toggle 메소드는 제한 시간동안 snow와 hide를 수행하는 메소드
+            $("#toggle").click(function(){
+                $("img").toggle(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="toggle">toggle</button>
+    <p></p>
+    <!-- style:position="absolute"   절대위치라는 뜻 -->
+    <img src="C:\media/banana.png" alt="바나나~" style:position="absolute">
+    
+</body>
+</html>

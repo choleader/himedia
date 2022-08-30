@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json 객체</title>
+    <script>
+        function init() {
+            // 다음과 같은 형태가 JSON, 키와 값 쌍으로 되어있음
+            let emp = {"name" : "민들레",
+                        "age" : "25",
+                        "tel" : "111-1111",
+                        "address" : "서울"
+            };
+             let msg = "";
+            //  emp.key를 쓰면 value 값이 출력됨
+            msg += "이름 : " + emp.name + "<br>"
+                + "나이 : " + emp.age + "<br>"
+                + "전화 : " + emp.tel + "<br>"
+                + "주소 : " + emp.address + "<br>"
+            //  입력받은 정보 innerHTML 메소드로 div 태그에 전달함
+            document.getElementById("result").innerHTML=msg;
+        }
+    </script>
+</head>
+<body onload = "init()">
+    <h2>JSON 표기법</h2>    
+    <div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>schedule</title>
+</head>
+    <style>
+        *{
+            font-family: "돋움";
+            font-size: 12px;
+            color: #444444;
+        }
+
+        table, tr, td{
+            margin-top: 15px;
+            border: 1px solid #aaaaaa;
+            border-collapse: collapse;
+        }
+
+        #date{
+            margin-top: 10px;
+            margin-left: 210px;
+        }
+
+        #date li{
+            font-size: 14px;
+        }
+
+        #day{
+            border-top: 2px solid #aaaaaa;
+        }
+        
+        tr{
+            height: 60px;
+            
+        }
+
+        td{
+            width: 76px;
+            vertical-align: top;
+            padding: 5px;
+            
+
+        }
+
+        #day{
+            height: 20px;
+            background-color: #f8f9f2;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #date li{
+            list-style-type: none;
+            float: left;
+        }
+        
+        .red{
+            color: red;
+        }
+
+        .blue{
+            color: blue;
+        }
+
+        #arrow{
+            height: 20px;
+            width: 20px;
+        }
+
+        #haksa{
+            height: 50px;
+            align-items: ;
+            position: relative; left: -60px;
+        }
+     
+
+    </style>
+<body>
+    <h3><img id="haksa" src="haksa.png"></h3>
+    <ul id = "date">
+        <li><img id="arrow" src="left1.png"></li>
+        <li>&nbsp;2017년 6월&nbsp;</li>
+        <li><img id="arrow" src="right1.png"></li>
+        <br>
+    </ul>
+    <table id="sched_tb1">
+        <tr id="day">
+            <td><span class = "red">일</span></td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+            <td><span class="blue"></span>토</td>
+        </tr>
+        <tr>
+            <td class="red"></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td class="blue">5</td>
+        </tr>
+        <tr>
+            <td class="red">6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9<br>특강</td>
+            <td>10</td>
+            <td>11</td>
+            <td class="blue">12</td>
+        </tr>
+        <tr>
+            <td class="red">13</td>
+            <td>14<br>기말고사</td>
+            <td>15<br>기말고사</td>
+            <td>16<br>기말고사</td>
+            <td>17<br>기말고사</td>
+            <td>18<br>기말고사</td>
+            <td class="blue">19</td>
+        </tr>
+        <tr>
+            <td class="red">20</td>
+            <td>21<br>하계방학</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td class="blue">26</td>
+        </tr>
+        <tr>
+            <td class="red">27</td>
+            <td>28</td>
+            <td>29<br>MT</td>
+            <td>30<br>MT</td>
+            <td>31</td>
+            <td></td>
+            <td class="blue"></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

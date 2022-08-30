@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery DOM2</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(let i = 0; i < 10; i++){
+                $('<h1>나는 헤드 태그얌 + ' + i + '</h1>').css({
+                    backgroundColor : 'black',
+                    color : 'green'
+                }).appendTo('body');
+            }
+        });
+    </script>
+</head>
+<body>
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function(){
+            for(let i = 0; i < 10; i++) {
+                let $dynamic = $('<h1>나는 바디 태그얌 + ' + i + '</h1>').css({
+                    backgroundColor : 'black',
+                    color : 'red'
+                });
+                $('body').append($dynamic);
+
+            }
+        });
+    </script>
+    
+</body>
+</html>

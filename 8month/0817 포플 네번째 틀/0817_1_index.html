@@ -1,0 +1,118 @@
+<!-- 플렉스박스
+플렉서블의 준말로 유동적인 레이아웃을 손쉽게 만든다는 의미이다.
+서로 다른 크기에 맞게 태그를 작성하도록 개발된 박스
+각 요소를 따로 계산하지 않고 공간분배를 알아서 해주고 정렬 간격을 조절하기 편하다.
+아이템간의 공간배분과 강력한 정렬기능을 제공하는 1차원 레이아웃 모델입니다.
+최신브라우저에서 지원한다. -->
+
+<!-- 
+nth-child 활용
+
+가상 클래스 선택자를 사용한다는 것은 HTML 태그에는 존재하지 않지만
+(클래스명이 존재하지 않습니다.) 필요에 따라 선택자를 지정하여 사용한다는 것입니다.
+:nth-child(n) 형제요소 중 n번째에 해당하는 요소에 스타일이 적용된다.
+노드기준이다 즉 태그의 단순순서이다
+
+:nth-of-type(n) 요소중 하나를 선택한다. 특정 요소를 기준으로 순서가 부여된다.
+같은 유형의 1이라면 첫번째가 선택된다.
+
+가상요소
+before(선택된 요소의 앞에), after(선택된 요소의 뒤에) 위치한다.
+가상클래스 선택자가 선택자를 지칭하는데 사용되었다면
+가상요소는 내용을 생성하는 영활을 한다. css 기능이다.
+의미 없는 이미지를 넣거나 float을 해제할 때도 사용한다.
+콘텐츠의 시각적인 효과를 위해 사용한다.
+Html 문서에 정보로 포함되지 않기 때문에 content 속성이 꼭 필요하다.
+예> .content:before{content : ""; display:block;}
+    .content:after{cotent:""; display:block;}
+    개발자 도구를 통하여 생성된 두 요소를 확인할 수 있다.
+    : 클론 대신 :: 더블클론도 사용이 가능하. 일반적으로는 : 클론이 사용된다.
+ -->
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, 
+    maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,
+    target-densitydpi=medium-dpi">
+    <title>시타북스</title>
+    <!-- 전화 주소 이메일 자동 링크 없앨 때 -->
+    <!-- <meta name="format=detection" content="telephone=no, address=no, email=no" /> -->
+    <!-- 기본 포맷 삭제 -->
+    <!-- <meta name="format-detection" content="no"/>-->
+    <meta name="title" property="og:title" content="시타북스">
+    <meta name="images" property="og:image" content="./images/ink_thumb.jpg">
+    <meta name="description" property="og:description" content="시타북스">
+    <meta name="type" property="og:type" content="article">
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="ui.css">
+</head>
+
+<body>
+    <!-- section 태그는 제목으로 시작하는 콘텐츠의 의미를 가지고있다. -->
+    <section id="wrap">
+        <h1>시타북스</h1>
+        <header>
+            <!-- 헤더 영역은 오른쪽에 구성되어있다. -->
+            <strong class="logo_box">
+                <img src="./images/mainLogo.png" alt="시타북스">
+            </strong>
+            <nav>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">도서소개</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <section id="container">
+            <!-- 콘텐츠영역 왼쪽에 해당된다. 메뉴 4개로 구성되어있다. -->
+            <section id="menu1" class="content">
+                <h2>회사소개</h2>
+                <div class="conbox"></div>
+            </section>
+
+            <section id="menu2" class="content">
+                <h2>도서소개</h2>
+                <div class="conbox"></div>
+            </section>
+
+            <section id="menu3" class="content">
+                <h2>FAQ</h2>
+                <div class="conbox"></div>
+            </section>
+
+            <section id="menu4" class="content">
+                <h2>Contact Us</h2>
+                <div class="conbox"></div>
+            </section>
+
+        </section>
+        <footer>
+            <address>(04033)서울특별시 마포구 잔다리로 109 TEL (02)325-1722 FAX</address>
+            <p>Copyright(c)2015 시타북스(주) EasysPublishing Co., Ltd. All Rights Reserved</p>
+            <a href="https://www.facebook.com/easyspub" class="face" title="페이스북으로 이동"></a>
+            <a href="https://twitter.com/easyspub" class="twit" title="트위터로 이동"></a>
+            <a href="https://www.instagram.com/easyspub_book" class="instar" title="인스타그램으로 이동"></a>
+        </footer>
+
+    </section>
+
+</body>
+
+</html>

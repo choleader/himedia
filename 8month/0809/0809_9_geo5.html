@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seoul_London</title>
+    <style>
+      html,
+      body {
+        height: 50%;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <button onClick="initMap(seoul);">Seoul</button>
+    <!-- seoul 버튼을 누르면 서울 위치로 이동 -->
+    <button onClick="initMap(london);">London</button>
+    <!-- london 버튼을 누르면 런던 위치로 이동 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPD1iNTY4FCSTyAHXGG3RDdj9AhX8yGxQ "></script>
+    <script>
+      function initMap(pos) {
+        // 지도 보여주기 함수 실행
+        var myLatlng = pos; // 내가 설정한 위치
+        var map = new google.maps.Map(document.getElementById("map"), {
+          // id="map" 인 영역에 지도 생성(츌력)
+          zoom: 4,
+          center: myLatlng, // 내가 설정한 위치 = 가운데 영역
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: "Click to zoom", // 마우스 오버 시 뜨는 문구
+        });
+
+        map.addListener("center_changed", function () {
+          // 마커가 찍은 위치를 벗어나면
+          window.setTimeout(function () {
+            map.panTo(marker.getPosition());
+          }, 3000); // 3초후에 다시 마커가 찍혀있는 곳으로 이동
+        });
+
+        marker.addListener("click", function () {
+          // 마커를 클릭하면
+          map.setZoom(8); //  화면이 zoom 되고
+          map.setCenter(marker.getPosition()); // 마커가 찍혀있는 곳이 지도의 중심이 됨
+        });
+      }
+
+      var seoul = {
+        // 서울의 위도, 경도
+        lat: 37.566535,
+        lng: 126.977969,
+      };
+
+      var london = {
+        // 런던의 위도, 경도
+        lat: 51.507351,
+        lng: -0.127758,
+      };
+
+      initMap(seoul); // default
+    </script>
+  </body>
+</html>

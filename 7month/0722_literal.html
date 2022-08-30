@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head>상수</head>
+<body>
+    <h3>상수 Literal</h3><hr>
+    <script>
+        var oct = 0o15; //015는 8진수, 10진수로 13(8+5)
+        var hex = 0x15; // 0x15는 16진수, 10진수로 21(16+5)
+        var condition = true; //True는 안됨
+
+        //진법 계산
+        document.write("8진수 0o15는 10진수로 " +oct + "<br>");
+        document.write("16진수 0x15는 10진수로 "+hex + "<br>");
+        document.write("condition은" + condition + "<br>");
+        document.write('문자열 : 단일인용부로호도 표현' + "<br>");
+        document.write("그녀는 \"누구세요\"라고 했습니다." + "<br>");
+        // 문자열 내에 큰따옴표("") 표현시 \" 로 표현
+        var x=32;
+        var total = 100 + x*2/4 - 3; //total은 113
+        var div = x / 10; //div는 3.2 나누기
+        var mod = x % 2 ; //x를 2로 나눈 나머지, 0
+        
+        document.write("x : " + x + "<br><br>");
+        document.write("100 + x*2/4 - 3 = " + total + "<br>");
+        document.write("x/10 = " + div + "<br>");
+        document.write("x%2 = " + mod + "<br>");
+
+        //논리연산자(등호 및 부등호)
+        var x=13,y=7;
+        document.write("x : " + x + ", y=" + y + "<br><br>");
+        document.write("x == y : " + (x == y) + "<br>");
+        document.write("x != y : " + (x != y) + "<br>");
+        document.write("x >= y : " + (x >= y) + "<br>");
+        document.write("x > y : " + (x > y) + "<br>");
+        document.write("x <= y : " + (x <= y) + "<br>");
+        document.write("x < y : " + (x < y) + "<br>");
+
+        //삼항 연산자 (a>b)?(a-b):(b-a)
+        var a=3, b=5;
+        document.write("a=" + a + ", b=" + b + "<br><br>");
+        document.write("두 수의 차이 : " + ((a>b)?(a-b):(b-a)) + "<br>");
+
+        var name = "kitae";
+        document.write(name == "kitae");
+        document.write("<br>");
+        document.write(name > "park");
+    </script>
+</body>
+</html>

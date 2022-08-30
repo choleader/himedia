@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Jeju</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <header>.
+      <div id="logo">
+        <a href="index.html">
+          <!--Dream Jeju 영역을 눌렀을 때 첫 화면으로 이동하는 기능-->
+          <h1>Dream Jeju</h1>
+        </a>
+      </div>
+      <nav>
+        <ul id="topMenu">
+          <li><a href="#">단체 여행 <span>▼</span></a>
+            <ul>
+              <li><a href="#">회사 연수</a></li>
+              <!--단체 여행 하위메뉴// a태그는 추후 연결 예정-->
+              <li><a href="#">수학 여행</a></li>
+              <!--단체 여행 하위메뉴 //a태그는 추후 연결 예정-->
+            </ul>
+          </li>
+          <li><a href="#">맞춤 여행 <span>▼</span></a>
+            <ul>
+              <li><a href="#">4.3 평화 기행</a></li>
+              <!--맞춤 여행 하위메뉴// a태그는 추후 연결 예정-->
+              <li><a href="#">곶자왈 체험</a></li>
+              <!--맞춤 여행 하위메뉴 //a태그는 추후 연결 예정-->
+              <li><a href="#">힐링 워크샵</a></li>
+              <!--맞춤 여행 하위메뉴// a태그는 추후 연결 예정-->
+            </ul>
+          </li>
+          <li><a href="#">갤러리</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="slideShow">
+      <div id="slides">
+        <img src="photo-1.jpg" alt="">
+        <img src="photo-2.jpg" alt="">
+        <img src="photo-3.jpg" alt="">
+        <button id="prev">&lang;</button>
+        <!--&lang; : 왼쪽 꺾쇠-->
+        <button id="next">&rang;</button>
+        <!--&lang; : 오른쪽 꺾쇠-->
+      </div>
+    </div>
+    <div id="contents">
+      <div id="tabMenu">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">공지사항</label>
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2">갤러리</label>
+        <div id="notice" class="tabContent">
+
+          <!-- 공지사항 선택시 나오는 항목, 공지사항은 디폴드값으로 처음 접속 시 선택되어있음 -->
+          <h2>공지사항 내용입니다.</h2>
+          <!--"공지사항 내용입니다." 문구는 화면에 노출되지 않음 (CSS에서 그렇게 설정)-->
+          <ul>
+            <li>사무실을 이전했습니다</li>
+            <li>[참가 모집] 카약 체험에 초대합니다.</li>
+            <li>[참가 모집] 여름 방학 기간, 오름 체험단을 모집합니다.</li>
+            <li>겨울, 추천 여행지</li>
+            <li>가을, 추천 여행지</li>
+          </ul>
+        </div>
+        <div id="gallery" class="tabContent">
+
+          <!-- 갤러리 선택 시 나오는 항목 -->
+          <h2>갤러리 내용입니다.</h2>
+          <!--"갤러리 내용입니다." 문구는 화면에 노출되지 않음 (CSS에서 그렇게 설정)-->
+          <ul>
+            <li><img src="img-1.jpg"></li>
+            <li><img src="img-2.jpg"></li>
+            <li><img src="img-3.jpg"></li>
+            <li><img src="img-1.jpg"></li>
+            <li><img src="img-2.jpg"></li>
+            <li><img src="img-3.jpg"></li>
+          </ul>
+        </div>
+      </div>
+      <!-- tab menu css에서 스타일 설정하였음. 공지사항이 선택되면 갤러리 내용은 사라지게 만들고 그 반대로도 만듬 -->
+      <div id="links">
+        <ul>
+          <li>
+            <a href="#">
+              <span id="quick-icon1"></span>
+              <!--css에서 백그라운드 이미지 설정-->
+              <p>평화기행</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon2"></span>
+              <!--css에서 백그라운드 이미지 설정-->
+              <p>힐링 워크샵</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span id="quick-icon3"></span>
+              <!--css에서 백그라운드 이미지 설정-->
+              <p>문의하기</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <!--footer 태그 : 홈페이지 하단부로 사용-->
+      <div id="bottomMenu">
+        <ul>
+          <li><a href="#">회사 소개</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">여행약관</a></li>
+          <li><a href="#">사이트맵</a></li>
+        </ul>
+        <div id="sns">
+          <ul>
+            <li><a href="https://www.facebook.com/HeungMinSonOfficial/"><img src="sns-1.png"></a></li>
+            <li><a href="https://www.youtube.com/watch?v=oonYQa82MU4&list=PLG7te9eYUi7typZrH4fqXvs4E22ZFn1Nj"><img
+                  src="sns-2.png"></a></li>
+            <li><a href="https://www.instagram.com/sangyeon107"><img src="sns-3.png"></a></li>
+            <!-- a태그 링크 연결 -->
+
+          </ul>
+        </div>
+      </div>
+      <div id="company">
+        <p>제주특별자치도 ***동 ***로 *** (대표전화) 123-456-7890</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="slideshow.js"></script> <!-- js 연결 -->
+</body>
+
+</html>

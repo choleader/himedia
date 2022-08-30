@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>switch 문으로 커피 주문</h3><hr>
+    <!-- 커피 값인 price 변수를 생성 -->
+    <script>
+        let price;
+        // prompt 문으로 문자열 변수가 들어오므로 별도의 parsing을 하지 않음
+        let coffee = prompt("무슨 커피 드릴까요?", "");
+        // switch 문의 키가 되는 변수값을 괄호 안에 써주고
+        switch(coffee){
+            // 첫번째 케이스는 별도의 문장이 없으므로
+            // 다음 한글 문자인 에스프레소 케이스는 break가 있으므로 switch문이 종료됨
+            case "espresso" :
+            case "에스프레소" : price = 2000;
+                break;
+            case "카푸치노" : price = 3000;
+                break;
+            case "카페라떼" : price = 3500;
+                break;
+                // 만족하는 케이스가 없으면 default가 실행
+            default : 
+                document.write(coffee + "는 없습니다.");
+        }
+        if(price != 0){
+            document.write(coffee + "는 " + price + "원입니다.")
+        }
+    </script>
+    
+</body>
+</html>

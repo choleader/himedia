@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>하하하하</title>
+
+        <style>
+            /* 일반 선택자 */
+            ul{
+                list-style: none;
+            }
+            li{
+                width: 100px;
+                display: inline;
+                float: left;
+                margin: 10px;
+            }
+            /* 후손 선택자 : li요소 안의 모든 a요소 */
+            li a {
+                padding: 5px 20px;
+                font-size: 11px;
+                color: blue;
+                text-decoration: none;
+            }
+
+            a[href] {
+                /* href 속성이 포함된 태그를 선택한다. */
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#">메인 메뉴 1</a></li>
+            <li><a href="#">메인 메뉴 2</a></li>
+            <li><a href="#">메인 메뉴 3</a></li>
+            <li><a href="#">메인 메뉴 4</a></li>
+        </ul>
+
+    </body>
+</html>

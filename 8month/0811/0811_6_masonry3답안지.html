@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메이손리</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <script>
+        // 이미지 파일을 배열 변수에 저장
+        var image_arr = ['C:\media/apple.png',
+            'C:\media/banana.png',
+            'C:\media/tangsuyuk.png'
+        ]
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background: black;
+            margin: 5px;
+        }
+    </style>
+
+
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            // for문으로 아래의 동작을 100번 실행
+            for (var i = 0; i < 100; i++) {
+                // div박스를 만들고, class를 box로 지정
+                $('<div></div>').addClass('box')
+                    .css({
+                        width: 100,
+                        // 박스의 height는 Math의 random 메소드를 사용하여 51~150의 숫자로 설정
+                        // floor메소드로 인하여 랜덤의 수가 1부터 시작한다.
+                        height: Math.floor(Math.random() * 100) + 50,
+                        src: image_arr[i % 3]
+                    })
+                    // 생성된 div박스의 배경 이미지로 image_arr에 저장된 3개의 이미지를 번갈아 가며 사용
+                    // i%3의 나머지 연산으로 인하여 0부터 2까지 반복된다.
+                    .css("background-image", "url(" + image_arr[i % 3] + ")")
+                    // 만든 div 박스들을 body 안에 추가한다.
+                    .appendTo('body');
+                $('box').attr('src, image_arr[i%3]');
+            }
+
+            // Massonry 플러그인을 적용합니다.
+            $('body').masonry({
+                // 열 넓이 100 지정
+                // 기본 width100에 padding 5*2이기 때문에 110으로 지정
+                columnWidth: 110
+                // body의 masonry함수를 이용해서 열넓이를 110으로 지정
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

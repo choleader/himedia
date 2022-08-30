@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px;
+            font-family: "돋움";
+            font-size: 12px;
+            color: #444444;
+            list-style-type: none;
+        }
+
+        #login_title{
+            width: 585px;
+            padding: 10px;
+            margin: 50px;
+            font-size: 50px;
+            border-style: solid;
+            border-color: #e6e2d7;
+        }
+
+        #login_box{
+            width: 610px;
+            height: 283px;
+            margin-top: 20px;
+            margin-left: 50px;
+            border-style: solid;
+            border-color: #cccccc;
+            border-radius: 20px;
+
+        }
+
+        #left, #right, #login_btn{
+            float: left;
+        }
+
+        #login_img{
+            width: 120px;
+        }
+
+        #unlock_img{
+            width: 160px;
+        }
+
+        #id_pass, #login_btn{
+            float: left;
+        }
+
+        #auto_login{
+            
+        }
+
+        #input_button{
+            margin-top: 100px;
+        }
+
+        #login_btn{
+            
+        }
+    </style>
+</head>
+<body>
+    <h2 id = "login_title">로그인</h2>
+    <div id = "login_box">
+        <ul id="login">
+            <li id="left"><img id="unlock_img" src="unlock.png"></li>
+            <li id="right">
+                <ul id="input_button">
+                    <li id="id_pass">
+                        <ul>
+                            <li><span>아 이 디</span><input type="text"></li>
+                            <li><span>비밀번호</span><input type="password"></li>
+                        </ul>
+                    </li> <!-- id_pass 끝-->
+                    <li id="login_btn"><img id="login_img" src="login.png"></li>
+                </ul> <!--input_button 끝-->
+                <div id="auto_login">
+                    <input type="checkbox"> 자동 로그인
+                </div>
+
+                <ul id="join_find">
+                    <li>아직 회원이 아니세요?</li>
+                    <li>아이디 또는 비밀번호를 잊으셨나요?</li>
+                </ul>
+            </li> <!--right-->
+        </ul> <!--login-->
+    </div> <!--login_box-->
+</body>
+</html>

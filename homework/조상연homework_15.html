@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포토 갤러리</title>
+</head>
+    <style>
+        #top_menu{
+            float: right;
+            padding-top: 10px;
+            padding-right: 10px;
+            font-size: small;
+            color: gray;
+        }
+        #header{
+            width: 800px;
+            height: 40px;
+            background: #dddddd;
+        }
+        #logo{
+            font-size: 16px;
+            color: #3e2b23;
+            padding-top: 10px;
+            padding-left: 30px;
+            float: left;
+        }
+        #left{
+            text-align: left;
+            width: 150px;
+            height: 600px;
+            background: #343333;
+            color: #e2e2e2;
+            float: left;  
+        }
+        div#menu{
+            margin: -10px;
+        }
+
+        #list{
+            font-size: 14px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-left: 25px;
+            list-style-type: none;
+        }
+        
+
+        li{padding: 3px;}
+        
+        h2{
+            font-weight: normal;
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+        #right{
+            width: 650px;
+            height: 600px;
+            background: #252525;
+            float: left;
+        }
+
+        #main_title{
+            width: 572px;
+            padding: 10px;
+            border: solid #444444 5px;
+            margin-top: 24px;
+            margin-right: 24px;
+            margin-left: 24px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #main_img{
+            padding-top: 15px;
+            padding-left: 24px;
+            max-width: 600px;
+            max-height: 400px;
+        }
+
+        #thumnail{
+            padding-top: 0px;
+            padding-left: 70px;
+        }
+
+        #move_left{
+            width: 60px;
+            height: 60px;
+            margin-top: 20px;
+            margin-right: 5px;
+            margin-left: 40px;
+            position: absolute; left: 150px;
+        
+        }
+        
+        #move_right{
+            width: 60px;
+            height: 60px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: relative; left: -40px;
+        }
+
+
+        #photos{
+            padding-top: 3px;
+            list-style: none;
+            position: relative; top: -5px; left: -30px;
+        }
+
+        #move_left, #move_right, #photos{
+            float: left;
+        }
+
+        #photos li img{
+            width: 60px;
+            height: 60px;
+            border: 5px solid #3d3d3d;
+        }
+
+        #photos li img:hover{
+            border: 5px solid #ffffff;
+        }
+
+        #photos li {
+            float: left;
+            margin-left: 15px;
+            padding-top: 0px;
+            /* align-content:center ; */
+        }
+
+
+    </style>
+<body>
+    <div id="header">
+        <div id="logo">PHOTO GALLERY</div>
+        <div id="top_menu">로그인 | 회원가입 | 방명록</div>
+    </div>
+    <div id="left">
+        <h2>포토갤러리</h2>
+        <ul id="list">
+            <li>+풍경</li>
+            <li>+일상</li>
+            <li>+인물</li>
+            <li>+가족</li>
+        </ul>
+    </div> <!--lef 끝 -->
+    <div id="right">
+        <div id="main_title">풍경 사진</div>
+        <img id="main_img" src="p1.png">
+        <div id="thumnail">
+            <img id="move_left" src="left.png" >
+            <ul id="photos">
+                <li><a href="#"><img src="p2.png"></a></li>
+                <li><a href="#"><img src="p3.png"></a></li>
+                <li><a href="#"><img src="p4.png"></a></li>
+                <li><a href="#"><img src="p5.png"></a></li>
+                <li><a href="#"><img src="p6.png"></a></li>
+            </ul>
+            <img id="move_right" src="right.png">
+        </div>
+    </div> <!--오른쪼 ㄱ끝~~-->
+  
+    
+    
+</body>
+</html>

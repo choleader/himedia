@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선으로 삼각형 그리기</title>
+</head>
+
+<body>
+    <h3>선으로 삼각형 그리기</h3>
+    <hr>
+    <canvas id="myCanvas" style="background-color: aliceblue" width="200" height="150"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+
+        context.beginPath(); //빈 경로 만들기
+        context.moveTo(120, 20); // (120, 20)을 시작점으로 설정
+        context.lineTo(20, 50); // 경로에 (120,20)에서 (20, 50)까지 직선 추가
+        context.lineTo(150, 120); // 경로에 (20, 50)에서 (150, 120)까지 직선 추가
+        context.lineTo(120, 20); // 경로에 (150, 120)에서 (120, 20)까지 직선 추가
+        context.strokeStyle = "magenta"; // 선의 색
+        context.stroke(); // 경로를 캔버스에 그린다.
+    </script>
+</body>
+
+</html>
+<!-- 도형 그리는 과정
+
+경로(path) 만들기
+    캔버스에 경로에 담긴 도형 모두 그리기
+
+경로(path) 만들기
+    그리고자 하는 도형들을 컨텍스트 내 경로에 담는 과정
+
+캔버스에 도형 그리는 순서
+    beginPath() - 새로운 빈 경로 만들기
+    moveTo(), lineTo(), rect(), arc() - 경로에 도형 담기
+    stroke() - 경로 속의 도형을 캔버스에 그리기
+
+
+ 원 그리기
+  (1) 원 혹은 원호(부채꼴) 그리기
+// 원 그리기
+context.beginPath();   // 도형 그리기를 시작
+context.arc(150, 100, 50, 0, 2 * Math.PI);   // (중심점x좌표, 중심점y좌표, 반지름, 시작각도, 종료각도) [라디안각]
+							// 2 * Math.PI = 360 도 (360도를 라디안으로 하면 2파이)
+context.stroke();   // 선 그리기
+
+// 원호 그리기
+context.beginPath();         // 도형 그리기 시작
+context.moveTo(100, 100);   // 원의 중심 점 x좌표, y좌표
+// arc(원 그리기 시작점x좌표, 원 그리기 시작점y좌표, 시작각도, 종료각도) [라디안각]
+context.arc(100, 100, 120, 0, Math.PI * 0.5);   // Math.PI * 0.5 = 90 도
+context.closePath();   // 도형 그리기 종료
+context.stroke();     // 선 그리기
+beginPath()          // 도형 그리기를 시작
+arc() //원의 중심 좌표와 반지름, 원을 그리기 시작할 시작 위치와 종료 위치의 좌표,
+    // 그리는 방향 등을 설정 (각도는 라디안 각도)
+closePath()         // 도형 그리기를 마침
+
+
+텍스트 그리기
+  (1) 테두리만 있는 글자 혹은 채워진 글자
+context.font = "40px Arial";   // 폰트 크기 40픽셀, 폰트 종류 Arial
+context.fillText(＂CANVAS＂, 50, 90); 
+ // 채워진 글자 그리기 (입력문자, 시작점x좌표, 시작점y좌표)
+context.strokeText("HTML5", 80, 150);  
+ // 테두리만 있는 글자 그리기 (입력문자, 시작점x좌표, 시작점y좌표)
+
+텍스트 그리기 메서드
+font() 텍스트의 크기, 폰트(font)와 색상 등을 설정
+fillText() 텍스트의 내용과 텍스트를 그리기 시작할 시작 위치의 좌표 설정
+strokeText() 테두리만 있는 텍스트를 그릴 때 사용
+
+-->

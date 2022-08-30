@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").toggleClass("yellow");
+            });
+        });
+    </script>
+    <style>
+        .yellow{
+            background-color: yellow;
+            font-size: xxx-large;
+        }
+    </style>
+</head>
+<body>
+    <p>조상연</p>
+    <div>032-515-1234</div>
+    <p>박명수</p>
+    <div>123-112-1234</div>
+    <p>유재석</p>
+    <div>123-1234-123123</div>
+    <br><br>
+    <button>버튼입니당</button>
+
+    
+</body>
+</html>

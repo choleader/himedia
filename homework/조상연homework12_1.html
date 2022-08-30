@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login.html</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "돋움";
+            font-size: 12px;
+            color: #444444;
+            list-style-type: none;
+        }
+
+        #login {
+            width: 585px;
+            padding: 10px;
+            margin: 50px;
+            font-size: 25px;
+            border: 5px solid #e6e2d7;
+        }
+
+        #login_box {
+            width: 610px;
+            height: 283px;
+            margin-top: 20px;
+            margin-left: 50px;
+            border: 2px solid #cccccc;
+            border-radius: 20px;
+
+        }
+
+        .button {
+            background-color: #5d5d5e;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            position: relative;
+            left: 460px;
+            top: 57px;
+        }
+
+        .button:hover {
+            background-color: hwb(120 67% 33%);
+            color: white;
+        }
+
+        .input-box>input {
+            border: 1px solid #cccccc;
+            padding: 2px 5px 5px 5px;
+            font-size: 10pt;
+            text-align: center;
+            width: 150px;
+        }
+
+        .input-box{
+            position: relative; left: -150px; top: 109px;
+            text-align: right;
+        }
+
+        .check{
+            position: relative; left: 300px; top: 60px;
+
+        }
+
+        #yet_member{
+            position: relative; top: 100px; left: 300px;
+        }
+
+        #yet_member li{
+            list-style-type: disc;
+        }
+
+        #input-box-pas{
+            position: relative; top: 112px;
+        }
+
+        #lock{
+            width: 200px;
+            position: relative; top: -100px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        로그인
+    </div>
+    <div id="login_box">
+        <form action="" method="POST">
+            <div class="input-box">
+                <label for="username">아 이 디</label>
+                <input id="username" type="text" name="username" placeholder="아이디">
+            </div>
+
+            <div class="input-box" id="input-box-pas">
+                <label for="password">비밀번호</label>
+                <input id="password" type="password" name="password" placeholder="비밀번호">
+            </div>
+
+            <input class="button" type="submit" value="로그인">
+            
+            <div class="check">
+                <input type="checkbox">
+                <label>
+                    자동 로그인
+                </label>
+            </div>
+
+            <div id="yet_member">
+                <ul>
+                    <li>아직 회원이 아니세요?</li>
+                    <li>아이디 또는 비밀번호를 잊으셨나요?</li>
+                </ul>
+
+            </div>
+
+        </form>
+
+        <div class="lock">
+            <img id="lock" src="p123.png" alt="이미지">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

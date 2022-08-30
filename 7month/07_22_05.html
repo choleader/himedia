@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대입연산</title>
+    <script>
+        // 이 부분은 전향 후향 연산자이다.
+        var num1 = 35;
+        // ++이 뒤에 오는 경우 해당 라인에서는 가산이 되지 않고
+        // 다음 줄에 된다 (선 출력 후 연산)
+        var num2 = num1++;
+        // ++이 먼저 오는 경우 최우선으로 연산이 진행된다.
+        // 선 연산(++) 후 출력(num) 이렇게 외우면 편하다.
+        // 각종 자격시험 단골 메뉴기 때문에 꼭 외워두는 것이 좋다.
+        var num3 = ++num1;
+
+        document.write("num1 = " + num1 + "<br>");
+        document.write("num2 = " + num2 + "<br>");
+        document.write("num3 = " + num3 + "<br>");
+
+        document.write("abc" + 23 + "<br>"); //문자열 연산
+        document.write(23 + "abc" + "<br>");
+        document.write(23 + "35" + "<br>");
+        document.write(23 + 35 + "<br>");
+        document.write(23 + 35 + "abc" + "<br>");
+        document.write("abc" + 23 + 35 + "<br><hr>");
+
+
+    </script>
+</head>
+<body>
+    <h3>대입연산</h3><hr>
+    <script>
+        var x=3, y=3, z=3;
+        document.write("x=" + x + ", y=" + y);
+        document.write(", z=" + z + "<br><br>");
+
+        x += 3;
+        y *= 3;
+        z %= 2;
+
+        document.write("x += 3; 실행 후 , x=" + x + "<br>");
+        document.write("x *y 3; 실행 후 , y=" + y + "<br>");
+        document.write("z %= 3; 실행 후 , z=" + z + "<br>");
+
+        var x=13, y=7;
+        document.write("x=" + x + ", y=" + y + "<br><br>");
+        document.write("x == y : " + (x == y) +"<br>");
+        document.write("x != y : " + (x != y) +"<br>");
+
+        var x = true, y = false;
+        document.write("x=" + x + ", y=" + y + "<br><br>");
+        document.write("x && y : " + (x&&y) + "<br>");
+        document.write("x || y : " + (x||y) + "<br>");
+        document.write("!x : " + (!x) + "<br>");
+        document.write("<hr>");
+        document.write("(3>2) && (3<4) : " + ((3>2) && (3<4)) + "<br>");
+        document.write("(3==-2) || (-1<0) : " + ((3==-2) || (-1<0)) );
+
+
+    </script>
+    
+</body>
+</html>
+
+<!-- 비교 연산 : 두 값 비교, true나 false의 결과를 내는 연산
+논리 연산 : AND, OR, NOT
+a && b 논리 AND 연산 a,b 모두 ture일 때 true를 리턴한다.
+a || b 논리 OR 연산 a,b 중 하나라도 true면 ture를 리턴한다.
+!a 논리 NOT 연산자 a true 이면 false값을 준다. -->
+
+<!-- 조건 연산(삼항연산)
+condition ? expT : expF
+    condition이 ture 이면 전체 결과는 expT의 계산값
+    false이면 expF의 계산 값 -->
+
+
+<!-- 증감연산자
+증감연산자 : ++, -- -->
+
+<!--  -->

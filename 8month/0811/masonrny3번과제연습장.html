@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소니</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <script>
+        // 이미지 파일을 배열 변수에 저장
+        var image_arr = ['C:\media/apple.png',
+            'C:\media/banana.png',
+            'C:\media/tangsuyuk.png'
+        ]
+
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background: black;
+            margin: 5px;
+        }
+    </style>
+
+
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            // 문서 객체를 생성합니다.
+            for (var i = 0; i < 100; i++) {
+                $('<div></div>').addClass('box').css({
+                    width: 100,
+                    height: Math.floor(Math.random() * 100) + 50,
+                    src: image_arr[i % 3]
+                }).appendTo('body');
+                $('box').attr('src, image_arr[i%3]');
+            }
+            // Massonry 플러그인을 적용합니다.
+            $('body').masonry({
+                columnWidth: 110
+                // body의 masonry함수를 이용해서 열넓이를 110으로 지정
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

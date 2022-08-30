@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오디오와 비디오 내장 페이지</title>
+</head>
+<body>
+    <h3>오디오와 비디오 내장하기</h3>
+    <hr>
+    <audio id="audio" src="C:\media/EmbraceableYou.mp3" autoplay loop controls>
+    웹 브라우저가 audio 태그를 지원하지 않습니다.
+    </audio>   
+    <hr>
+    <video id="video" width="300" height="200" autoplay controls>
+        <source src="C:\media/bear.mp4" type="video/mp4">
+        웹 브라우저가 video 태그를 지원하지 않습니다.
+    </video>
+    
+</body>
+</html>
+
+<!-- 오디오 DOM 객체 알아내기
+var audio = document.getElementById("audio");
+
+오디오 재생 및 일시 중지
+audio.play(); // 재생. 중지된 이후부터 재생
+audio.pause(); // 일시 중지
+
+오디오 처음부터 재생
+audio.load(); // src에 지정된 오디오 데이터 로드
+audio.play(); // 처음부터 재생
+
+오디오 음량 제어와 음소거
+audio.volume += 0.1; // 0.1 만큼 음량 증가
+audio.muted = true; // 음소거. 음량(volume) 변경 없음
+
+비디오 DOM 객체 알아내기
+var videio = document.getElementById("video");
+
+width, height와 videoWidth, videoHeight 프로퍼티
+    width, height : <video> 태그의 width, height 속성 반영
+    videoWidth, videoHeight : 비디오 미디어의 화면 해상도
+
+loadedmetadata 이벤트
+        비디오 파일의 로드 완료시, video 객체에 loademetadata 이벤트 발생
+        예) 비디오의 해상도 알아내기
+
+비디오가 로드외어야 비로소 videoWidth, videoHeight 프로퍼티가 정환한 값을 가짐
+video.onloadedmetadata = function f(e) {
+    alert(video.videoWidth + "," + video.cudeoHeight);
+
+}
+
+
+
+
+
+
+
+-->

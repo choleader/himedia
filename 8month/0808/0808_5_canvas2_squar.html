@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사각형 그리기</title>
+</head>
+
+<body>
+    <h3>사각형 그리기</h3>
+    <hr>
+    <!-- 초기의 배경이 되는 사각형을 그림
+    200, 150 공간을 벗어나면 그림이 잘림 -->
+    <canvas id="myCanvas" style="background-color: aliceblue" width="200" height="150"></canvas>
+    <script>
+        // myCanvas가 그림판이 됨
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+
+        context.beginPath(); // 빈 경로 구성
+        for (let i = 0; i < 5; i++) {
+            // for문을 활용해 정사각형의 좌표를 일정 간격으로 좌하단 이동시킴
+            context.rect(10 + i * 30, 10 + i * 10, 50, 50);
+        }
+        context.strokeStyle = "magenta"; // 선의 색
+        context.stroke(); // 사각형을 캔버스에 그린다
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!-- 이미지 그리기
+  (1) 스크립트를 이용하여 canvas 요소에 이미지 그리기 
+<p><button onclick="drawImage()">이미지 그리기</button></p>  
+
+<script>
+    function drawImage() {
+        var srcImg = “d:\\media/apple.png”;   
+        // 이미지 주소 경로
+        context.drawImage(srcImg, 10, 10);   
+        // 이미지 그리기 (이미지 주소, x좌표, y 좌표[, 가로너비, 세로높이])
+    }
+</script> 

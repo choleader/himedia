@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.serch {
+  text-align: center;
+}
+
+.serch input {
+  border: none;
+}
+
+.serch input[type="text"] {
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 25px 0 0 25px;
+}
+.serch input[type="submit"] {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 0 25px 25px 0;
+  width: 130px;
+  margin-left: -5px;
+}
+
+.serch input[type="submit"]:hover {
+  cursor: pointer;
+}

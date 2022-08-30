@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>회원 가입 양식</title>
+    </head>
+    <body>
+        <h3>회원 가입 양식</h3>
+        
+        <form>
+        <table>
+            <tr>
+                <td>-아이디</td>
+                <td><input type="text" size="15" value=""></td>
+            </tr>
+            <tr>
+                <td>-비밀번호</td>
+                <td><input type="password" size="15" value=""></td>
+            </tr>
+            <tr>
+                <td>-비밀번호 확인</td>
+                <td><input type="password" size="15" value=""></td>
+            </tr>
+            <tr>
+                <td>-이름</td>
+                <td><input type="text" size="15" value=""></td>
+            </tr>
+            <tr>
+                <td>-성별</td>
+                <td><input type="radio" name="gender">남성 <input type="radio" name="gender">여성</td>
+            </tr>
+            <tr>
+                <td>-전화번호</td>
+                <td><select name="phonenumber">
+                    <option value="1">02</option>
+                    <option value="2">031</option>
+                    <option value="3" selected>032</option>
+                    <option value="4">033</option>
+                    - <input type="tel"> - <input type="tel">
+                    <!-- 셀렉트 박스와 인풋 박스 사이에 하이픈 넣는법 모르겠습니다...  -->
+                </select></td>
+            </tr>
+            <tr>
+                <td>-이메일</td>
+                <td><input type="text">
+                    @
+                    <select name="mail">
+                        <option value="" selected>선택</option>
+                        <option value="">naver.com</option>
+                        <option value="">daum.net</option>
+                        <option value="">cyworld.com</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>-자기소개</td>
+                <td><textarea name="introduce" cols="60" rows="8"></textarea></td>
+            </tr>
+
+        </table>
+        </form>
+    </body>
+</html>
